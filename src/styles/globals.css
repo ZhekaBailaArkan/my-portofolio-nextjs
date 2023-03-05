@@ -7,3 +7,7 @@
 body {
   @apply font-poppins bg-[#FFFEFD];
 }
+
+* {
+  @apply scroll-smooth;
+}

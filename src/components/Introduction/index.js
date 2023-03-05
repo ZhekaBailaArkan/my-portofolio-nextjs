@@ -3,16 +3,12 @@ import Link from "next/link";
 import React from "react";
 import {
   IoLogoGithub,
-  IoLogoFacebook,
   IoLogoInstagram,
-  IoLogoWhatsapp,
 } from "react-icons/io";
 
 const icons = [
-  { href: "https://www.instagram.com/zh33k4/", icon: IoLogoFacebook },
   { href: "https://github.com/ZhekaBailaArkan", icon: IoLogoGithub },
   { href: "https://www.instagram.com/zh33k4/", icon: IoLogoInstagram },
-  { href: "https://www.instagram.com/zh33k4/", icon: IoLogoWhatsapp },
 ];
 
 function Introduction() {
@@ -41,7 +37,7 @@ function Introduction() {
             </Link>
           ))}
         </div>
-        <div className="mt-6 bg-salmon w-48 flex justify-center px-14 py-2 text-white font-semibold text-lg rounded-sm drop-shadow-[0px_15px_30px_#FD5956]">
+        <div className="mt-6 bg-salmon w-48 flex justify-center px-14 py-2 text-white font-semibold text-lg rounded-sm z-0 drop-shadow-[0px_15px_30px_#FD5956]">
           CV Here
         </div>
       </div>

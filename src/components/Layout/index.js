@@ -1,14 +1,20 @@
+import Head from "next/head";
 import React from "react";
-import Footer from "../Footer";
 import Navbar from "../Navbar";
 
-function Layout({ children }) {
+function Layout({ children, className }) {
   return (
-    <div className="scroll-smooth">
-      <Navbar />
-      {children}
-      {/* <Footer />   */}
-    </div>
+    <>
+      <Head>
+        <title></title>
+      </Head>
+      <div className="flex justify-center">
+        <Navbar />
+        <div className="snap-container max-w-[1700px]">
+          <div className={className}>{children}</div>
+        </div>
+      </div>
+    </>
   );
 }
 

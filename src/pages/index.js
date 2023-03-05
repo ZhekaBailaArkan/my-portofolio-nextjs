@@ -1,8 +1,8 @@
-import AboutMe from '@/components/AboutMe'
-import Introduction from '@/components/Introduction'
-import Layout from '@/components/Layout'
-import Skils from '@/components/Skils'
-import React from 'react'
+import AboutMe from "@/components/AboutMe";
+import Introduction from "@/components/Introduction";
+import Layout from "@/components/Layout";
+import Skils from "@/components/Skils";
+import React from "react";
 
 export default function Home() {
   return (
@@ -11,5 +11,5 @@ export default function Home() {
       <AboutMe />
       <Skils />
     </Layout>
-  )
+  );
 }

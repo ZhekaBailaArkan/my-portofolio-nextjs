@@ -1,18 +1,22 @@
-import Link from "next/link";
 import React, { useState } from "react";
-import Logo from "../svgs/Logo";
+import MyFoto from "public/zhekaFoto.png";
+import Image from "next/image";
 
 function Navbar() {
   const [active, setActive] = useState(null);
   return (
-    <nav className="flex justify-between items-center py-6 px-36 fixed top-0 w-screen bg-white">
-      <Link href="/">
-        <Logo />
-      </Link>
-      <div className="flex gap-12">
-        <Link
+    <nav className="flex justify-between items-center py-4 px-36 fixed top-0 w-screen max-w-[1700px] bg-white z-50">
+      <Image
+        src={MyFoto}
+        width={40}
+        height={40}
+        alt={MyFoto}
+        className="rounded-full"
+      />
+      <div className="flex gap-16">
+        <a
           href="#home"
-          className={`font-normal text-lg duration-300 ${
+          className={`font-normal text-base duration-300 hover:text-salmon ${
             active == 1
               ? "text-salmon border border-b-2 border-b-salmon border-x-0 border-t-0"
               : ""
@@ -20,21 +24,21 @@ function Navbar() {
           onClick={() => setActive(1)}
         >
           Home
-        </Link>
-        <Link
+        </a>
+        <a
           href="#about"
-          className={`font-normal text-lg duration-300 ${
+          className={`font-normal text-base duration-300 hover:text-salmon ${
             active == 2
               ? "text-salmon border-b-2 border-solid border-b-salmon border-x-0 border-t-0"
               : ""
           }`}
           onClick={() => setActive(2)}
         >
-          About Me
-        </Link>
-        <Link
+          About me
+        </a>
+        <a
           href="#skils"
-          className={`font-normal text-lg duration-300 ${
+          className={`font-normal text-base duration-300 hover:text-salmon ${
             active == 3
               ? "text-salmon border-b-2 border-solid border-b-salmon border-x-0 border-t-0"
               : ""
@@ -42,10 +46,10 @@ function Navbar() {
           onClick={() => setActive(3)}
         >
           Skils
-        </Link>
-        <Link
+        </a>
+        <a
           href="#contact"
-          className={`font-normal text-lg duration-300 ${
+          className={`font-normal text-base duration-300 hover:text-salmon ${
             active == 4
               ? "text-salmon border-b-2 border-solid border-b-salmon border-x-0 border-t-0"
               : ""
@@ -53,7 +57,7 @@ function Navbar() {
           onClick={() => setActive(4)}
         >
           Contact
-        </Link>
+        </a>
       </div>
     </nav>
   );
